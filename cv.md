@@ -51,7 +51,7 @@
 -  на English иметь желательно. Если вакансия опублинована на Englsih - шлите на нем. Часто могут на нем попросить, если работодатель иностранный.
 -  удобно иметь резюме где то в инете (hh, linkedin, google doc, чтобы им было удобно делиться).
 
-### Позиционирование <a href="https://github.com/JavaOPs/topjava/blob/master/description.md">проекта Topjava</a>:
+### Позиционирование <a href="https://github.com/JavaOPs/ru.javawebinar.topjava.web.ru.javawebinar.topjava/blob/master/description.md">проекта Topjava</a>:
 -  После завершения проекта вы освоите все заявленные в нем технологии - вставьте их в квалификацию (включая java 8 Stream and Time API). В разделе опыт работы (если у вас нет коммерческого опыта) вставьте:
 
         Участие в разработке Spring/JPA Enterprise приложения c авторизацией и правами доступа на основе ролей 
