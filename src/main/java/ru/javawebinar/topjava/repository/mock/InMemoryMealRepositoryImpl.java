@@ -1,12 +1,14 @@
 package ru.javawebinar.topjava.repository.mock;
 
 import org.springframework.stereotype.Repository;
+import ru.javawebinar.topjava.AuthorizedUser;
 import ru.javawebinar.topjava.repository.MealRepository;
 
-import java.util.Collection;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Collectors;
+
 import ru.javawebinar.topjava.model.Meal;
 import ru.javawebinar.topjava.util.MealsUtil;
 
@@ -22,14 +24,17 @@ public class InMemoryMealRepositoryImpl implements MealRepository {
     public Meal save(Meal meal) {
         if (meal.isNew()) {
             meal.setId(counter.incrementAndGet());
+            meal.setUserId(AuthorizedUser.id());
         }
         repository.put(meal.getId(), meal);
         return meal;
     }
 
     @Override
-    public void delete(int id) {
+    public boolean delete(int id) {
+
         repository.remove(id);
+        return true;
     }
 
     @Override
@@ -38,8 +43,15 @@ public class InMemoryMealRepositoryImpl implements MealRepository {
     }
 
     @Override
-    public Collection<Meal> getAll() {
-        return repository.values();
+    public List<Meal> getAll() {
+
+        List<Meal> meals = repository.values().stream()
+                                                    .filter(meal -> meal.getUserId() == AuthorizedUser.id())
+                                                    .sorted(Collections.reverseOrder(Comparator.comparing(Meal::getDateTime)))
+                                                    .collect(Collectors.toList());
+        if (meals == null || meals.size() == 0)
+            meals = null;
+        return meals;
     }
 }
 
