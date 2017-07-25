@@ -45,7 +45,6 @@ Java Enterprise Online Project
 
 ##  ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFZDdaaU5fZEo4X3c">Работа с проектом (выполнять инструкции)</a>
 - **<a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFRXM4WVdTTGN3Q28">Prepare_ to_ HW0.patch (скачать и положить в каталог вашего проекта)</a>**
--  <a href="http://www.youtube.com/watch?v=_PDIVhEs6TM">Доступно о Java 8 Lambda</a>
 
 ##  Инструкция по шагам (из видео):</h3>
 -  <a href="http://javawebinar.ru/#/soft">Установить ПО (git, JDK8, IntelliJ IDEA, Maven)</a>
@@ -85,6 +84,7 @@ Java Enterprise Online Project
 ```
 Сделать реализация через Java 8 Stream API. Заменяйте forEach оператором stream.map(..)
 ```
+-  <a href="http://www.youtube.com/watch?v=_PDIVhEs6TM">Видео: Доступно о Java 8 Lambda</a>
 -  <a href="http://devcolibri.com/4137#t2">Java 8: Lambda выражения</a>
 -  <a href="http://devcolibri.com/4274#t7">Java 8: Потоки</a>
 -  <a href="http://prologistic.com.ua/polnoe-rukovodstvo-po-java-8-stream.html">Pуководство по Java 8 Stream</a>
@@ -107,7 +107,7 @@ Java Enterprise Online Project
 - Объявляйте переменные непосредственно перед использованием (если возможно - сразу с инициализацией). При объявлении коллекций используйте тип переменной - интерфейс (Map, List, ..)
 - Если IDEA предлагает оптимизацию (желтым подчеркивает), нарпимер заменить лямбду на метод-референс, соглашайтесь (Alt+Enter)
 - Пользуйтесь форматированием кода в IDEA: `Alt+Ctrl+L`
-- Перед check-in проверяйте чендж-лист (курсор на файл и Ctrl+D): не оставляйте в коде ничего лишнего (закомментированный код, TODO и пр.). Если файл не меняется (например только пробелы или переводы строк), делайте ему revert.
+- Перед check-in проверяйте чендж-лист (курсор на файл и Ctrl+D): не оставляйте в коде ничего лишнего (закомментированный код, TODO и пр.). Если файл не меняется (например только пробелы или переводы строк), не надо его чекинить, делайте ему `revert` (Git -> Revert / `Ctrl+Alt+Z`).
 - `System.out.println` нельзя делать нигде, кроме как в `main`. Позже введем логирование.
 - Результаты, возвращаемые `UserMealsUtil.getFilteredWithExceeded` мы будем использовать [в нашем приложении](http://topjava.herokuapp.com/) для фильтрации по времени и отображения еды правильным цветом.
 - Обращайте внимание на комментарии к вашим коммитам в git. Они должны быть короткие и информативные (лучше на english)
@@ -120,6 +120,8 @@ Java Enterprise Online Project
 Все остальное - опционально.
 
 #### HTML, JavaScript, CSS 
+- [Справочник по WEB](https://developer.mozilla.org/ru/)
+- [Видео по WEB технологиям](https://www.youtube.com/user/WebMagistersRu/playlists)
 - [Изучение JavaScript в одном видео уроке за час](https://www.youtube.com/watch?v=QBWWplFkdzw)
 - <a href="http://www.w3schools.com/default.asp">HTML, CSS, JAVASCRIPT, SQL, JQUERY, BOOTSTRAP</a>
 - <a href="https://www.youtube.com/watch?v=j0ycGQKqMT4">Введение в программирование на JavaScript</a>
